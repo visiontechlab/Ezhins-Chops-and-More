@@ -1,0 +1,2008 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EZHINS | Made With Love, Made For Your Moments</title>
+
+    <meta name="description"
+        content="Ezhins offers catering, tailoring, henna design, meals, surprise packages, gifts and decorations.">
+
+    <style>
+        /* =========================
+           GENERAL
+        ========================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        :root {
+            --red: #a9152b;
+            --dark-red: #7d0d20;
+            --light-red: #fff0f2;
+            --cream: #fffaf4;
+            --white: #ffffff;
+            --dark: #222222;
+            --gray: #666666;
+            --gold: #c49a4a;
+            --border: #eadfda;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: var(--cream);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            width: 100%;
+            display: block;
+        }
+
+        button {
+            font-family: inherit;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .section {
+            padding: 90px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title span {
+            color: var(--red);
+            font-size: 14px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .section-title h2 {
+            font-size: 38px;
+            margin: 8px 0 12px;
+        }
+
+        .section-title p {
+            max-width: 650px;
+            margin: auto;
+            color: var(--gray);
+        }
+
+        /* =========================
+           NAVBAR
+        ========================== */
+
+        header {
+            background: rgba(255, 250, 244, 0.96);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            min-height: 75px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 900;
+            color: var(--red);
+            letter-spacing: 2px;
+        }
+
+        .logo small {
+            display: block;
+            font-size: 8px;
+            color: var(--dark);
+            letter-spacing: 3px;
+            margin-top: -5px;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: 15px;
+            font-weight: 600;
+            transition: .3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--red);
+        }
+
+        .nav-order {
+            background: var(--red);
+            color: var(--white) !important;
+            padding: 11px 19px;
+            border-radius: 30px;
+        }
+
+        .nav-order:hover {
+            background: var(--dark-red);
+        }
+
+        .menu-btn {
+            display: none;
+            border: none;
+            background: transparent;
+            font-size: 28px;
+            cursor: pointer;
+            color: var(--red);
+        }
+
+        /* =========================
+           HERO
+        ========================== */
+
+        .hero {
+            min-height: 88vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(255,250,244,.98) 0%,
+                    rgba(255,250,244,.92) 48%,
+                    rgba(255,250,244,.45) 100%
+                );
+        }
+
+        .hero-content {
+            max-width: 650px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-label {
+            display: inline-block;
+            color: var(--red);
+            background: var(--light-red);
+            padding: 8px 16px;
+            border-radius: 30px;
+            font-size: 13px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: clamp(48px, 7vw, 82px);
+            line-height: .95;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: var(--red);
+        }
+
+        .tagline {
+            font-family: Georgia, serif;
+            font-size: 25px;
+            color: var(--dark-red);
+            margin-bottom: 18px;
+        }
+
+        .hero p {
+            color: var(--gray);
+            max-width: 580px;
+            margin-bottom: 30px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 25px;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: .3s;
+            border: 2px solid var(--red);
+        }
+
+        .btn-primary {
+            background: var(--red);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--dark-red);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            color: var(--red);
+        }
+
+        .btn-outline:hover {
+            background: var(--red);
+            color: white;
+        }
+
+        .hero-shape {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            right: -120px;
+            top: 50%;
+            transform: translateY(-50%);
+            border-radius: 50%;
+            background: var(--light-red);
+            border: 35px solid rgba(169,21,43,.08);
+        }
+
+        .hero-shape::after {
+            content: "EZHINS";
+            position: absolute;
+            inset: 0;
+            display: grid;
+            place-items: center;
+            font-size: 70px;
+            font-weight: 900;
+            color: rgba(169,21,43,.12);
+            transform: rotate(-15deg);
+        }
+
+        /* =========================
+           ABOUT
+        ========================== */
+
+        .about {
+            background: var(--white);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-image {
+            min-height: 430px;
+            background: var(--light-red);
+            border-radius: 25px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+        }
+
+        .about-image img {
+            height: 100%;
+            min-height: 430px;
+            object-fit: cover;
+        }
+
+        .about-text span {
+            color: var(--red);
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 13px;
+        }
+
+        .about-text h2 {
+            font-size: 40px;
+            line-height: 1.1;
+            margin: 10px 0 20px;
+        }
+
+        .about-text p {
+            color: var(--gray);
+            margin-bottom: 15px;
+        }
+
+        .about-list {
+            margin-top: 25px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            list-style: none;
+        }
+
+        .about-list li::before {
+            content: "✓";
+            color: var(--red);
+            font-weight: bold;
+            margin-right: 8px;
+        }
+
+        /* =========================
+           SERVICES
+        ========================== */
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 18px;
+        }
+
+        .service-card {
+            background: var(--white);
+            border: 1px solid var(--border);
+            padding: 28px 18px;
+            text-align: center;
+            border-radius: 18px;
+            transition: .3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--red);
+            box-shadow: 0 15px 35px rgba(0,0,0,.07);
+        }
+
+        .service-icon {
+            width: 65px;
+            height: 65px;
+            margin: 0 auto 18px;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            background: var(--light-red);
+            font-size: 28px;
+        }
+
+        .service-card h3 {
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .service-card p {
+            color: var(--gray);
+            font-size: 13px;
+        }
+
+        /* =========================
+           FEATURED MEDIA
+        ========================== */
+
+        .featured {
+            background: var(--light-red);
+        }
+
+        .media-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .media-card {
+            background: white;
+            border-radius: 18px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+        }
+
+        .media-card img,
+        .media-card video {
+            height: 260px;
+            object-fit: cover;
+            background: #f1e7e4;
+        }
+
+        .media-info {
+            padding: 18px;
+        }
+
+        .media-info h3 {
+            margin-bottom: 5px;
+        }
+
+        .media-info p {
+            color: var(--gray);
+            font-size: 14px;
+        }
+
+        /* =========================
+           CATEGORY SHOWCASE
+        ========================== */
+
+        .category {
+            background: white;
+        }
+
+        .category:nth-child(even) {
+            background: var(--cream);
+        }
+
+        .category-heading {
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .category-heading h2 {
+            font-size: 34px;
+        }
+
+        .category-heading p {
+            color: var(--gray);
+            max-width: 600px;
+        }
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 15px;
+        }
+
+        .category-item {
+            border-radius: 15px;
+            overflow: hidden;
+            background: var(--light-red);
+            border: 1px solid var(--border);
+        }
+
+        .category-item img {
+            height: 210px;
+            object-fit: cover;
+        }
+
+        .category-item h4 {
+            padding: 12px;
+            font-size: 14px;
+        }
+
+        /* =========================
+           VIDEOS
+        ========================== */
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+            margin-top: 30px;
+        }
+
+        .video-box {
+            background: #eee;
+            border-radius: 18px;
+            overflow: hidden;
+        }
+
+        .video-box video {
+            width: 100%;
+            height: 270px;
+            display: block;
+            object-fit: cover;
+        }
+
+        /* =========================
+           GALLERY
+        ========================== */
+
+        .gallery {
+            background: var(--white);
+        }
+
+        .filters {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 35px;
+        }
+
+        .filter-btn {
+            border: 1px solid var(--border);
+            background: white;
+            padding: 9px 17px;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: .3s;
+        }
+
+        .filter-btn.active,
+        .filter-btn:hover {
+            background: var(--red);
+            color: white;
+            border-color: var(--red);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+        }
+
+        .gallery-item {
+            height: 240px;
+            border-radius: 15px;
+            overflow: hidden;
+            background: var(--light-red);
+        }
+
+        .gallery-item img {
+            height: 100%;
+            object-fit: cover;
+            transition: .5s;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.06);
+        }
+
+        .gallery-item.hide {
+            display: none;
+        }
+
+        /* =========================
+           ORDER CTA
+        ========================== */
+
+        .order {
+            padding: 90px 0;
+            background: var(--red);
+            color: white;
+            text-align: center;
+        }
+
+        .order h2 {
+            font-size: 44px;
+            margin-bottom: 12px;
+        }
+
+        .order p {
+            max-width: 650px;
+            margin: 0 auto 30px;
+            opacity: .9;
+        }
+
+        .order .btn {
+            background: white;
+            color: var(--red);
+            border-color: white;
+        }
+
+        .order .btn:hover {
+            background: var(--cream);
+        }
+
+        /* =========================
+           CONTACT
+        ========================== */
+
+        .contact {
+            background: var(--cream);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .contact-info h2 {
+            font-size: 38px;
+            margin-bottom: 15px;
+        }
+
+        .contact-info > p {
+            color: var(--gray);
+            margin-bottom: 30px;
+        }
+
+        .contact-item {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 22px;
+            align-items: flex-start;
+        }
+
+        .contact-icon {
+            width: 45px;
+            height: 45px;
+            flex-shrink: 0;
+            border-radius: 50%;
+            background: var(--light-red);
+            display: grid;
+            place-items: center;
+        }
+
+        .contact-item h4 {
+            margin-bottom: 2px;
+        }
+
+        .contact-item p {
+            color: var(--gray);
+        }
+
+        .contact-card {
+            background: white;
+            padding: 35px;
+            border-radius: 22px;
+            border: 1px solid var(--border);
+        }
+
+        .contact-card h3 {
+            margin-bottom: 20px;
+        }
+
+        .contact-card a {
+            display: block;
+            background: var(--red);
+            color: white;
+            padding: 15px;
+            text-align: center;
+            border-radius: 30px;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+
+        .contact-card a:hover {
+            background: var(--dark-red);
+        }
+
+        .contact-card .social {
+            background: var(--dark);
+        }
+
+        /* =========================
+           FOOTER
+        ========================== */
+
+        footer {
+            background: #1d1718;
+            color: white;
+            padding: 55px 0 25px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr;
+            gap: 50px;
+            margin-bottom: 40px;
+        }
+
+        footer .logo {
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        footer p {
+            color: #bbb;
+            max-width: 420px;
+        }
+
+        footer h3 {
+            margin-bottom: 15px;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 8px;
+            color: #bbb;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .copyright {
+            border-top: 1px solid #3b3334;
+            padding-top: 20px;
+            text-align: center;
+            color: #999;
+            font-size: 13px;
+        }
+
+        /* =========================
+           ANIMATION
+        ========================== */
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(25px);
+            transition: .7s ease;
+        }
+
+        .reveal.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* =========================
+           RESPONSIVE
+        ========================== */
+
+        @media (max-width: 1000px) {
+
+            .services-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .category-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .hero-shape {
+                opacity: .4;
+            }
+        }
+
+        @media (max-width: 750px) {
+
+            .section {
+                padding: 65px 0;
+            }
+
+            .section-title h2 {
+                font-size: 30px;
+            }
+
+            .menu-btn {
+                display: block;
+            }
+
+            .nav-links {
+                position: absolute;
+                top: 75px;
+                left: 0;
+                width: 100%;
+                background: var(--cream);
+                flex-direction: column;
+                align-items: stretch;
+                gap: 0;
+                padding: 10px 5%;
+                border-bottom: 1px solid var(--border);
+                display: none;
+            }
+
+            .nav-links.show {
+                display: flex;
+            }
+
+            .nav-links li {
+                border-bottom: 1px solid var(--border);
+            }
+
+            .nav-links a {
+                display: block;
+                padding: 14px 5px;
+            }
+
+            .nav-order {
+                text-align: center;
+                margin: 8px 0;
+            }
+
+            .hero {
+                min-height: 80vh;
+            }
+
+            .hero-shape {
+                width: 350px;
+                height: 350px;
+                right: -170px;
+                opacity: .3;
+            }
+
+            .hero h1 {
+                font-size: 55px;
+            }
+
+            .tagline {
+                font-size: 21px;
+            }
+
+            .about-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-image,
+            .about-image img {
+                min-height: 300px;
+            }
+
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .media-grid,
+            .video-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .category-heading {
+                display: block;
+            }
+
+            .category-heading h2 {
+                margin-bottom: 8px;
+            }
+
+            .category-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .gallery-item {
+                height: 190px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+        }
+
+        @media (max-width: 450px) {
+
+            .hero h1 {
+                font-size: 46px;
+            }
+
+            .services-grid,
+            .category-grid,
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-list {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .btn {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+
+    <header>
+        <div class="container">
+            <nav>
+
+                <!-- Replace this with the actual logo later -->
+                <a href="#home" class="logo">
+                    EZHINS
+                    <small>CHOPS & MORE</small>
+                </a>
+
+                <button class="menu-btn" id="menuBtn">
+                    ☰
+                </button>
+
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#home">Home</a></li>
+
+                    <li><a href="#services">Services</a></li>
+
+                    <li><a href="#gallery">Gallery</a></li>
+
+                    <li><a href="#about">About</a></li>
+
+                    <li><a href="#contact">Contact</a></li>
+
+                    <li>
+                        <a href="#order" class="nav-order">Order Now</a>
+                    </li>
+                </ul>
+
+            </nav>
+        </div>
+    </header>
+
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <section class="hero" id="home">
+
+        <div class="container">
+
+            <div class="hero-content reveal">
+
+                <span class="hero-label">
+                    CATERING • FASHION • BEAUTY • SURPRISES
+                </span>
+
+                <h1>
+                    Welcome to
+                    <span>EZHINS.</span>
+                </h1>
+
+                <div class="tagline">
+                    Made With Love, Made For Your Moments.
+                </div>
+
+                <p>
+                    From delicious chops and beautiful meals to elegant
+                    outfits, stunning henna designs and unforgettable
+                    surprise packages — Ezhins is here to make your
+                    special moments even more beautiful.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#order" class="btn btn-primary">
+                        Place an Order
+                    </a>
+
+                    <a href="#services" class="btn btn-outline">
+                        Explore Services
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="hero-shape"></div>
+
+    </section>
+
+
+    <!-- =========================
+         ABOUT
+    ========================== -->
+
+    <section class="section about" id="about">
+
+        <div class="container">
+
+            <div class="about-grid">
+
+                <div class="about-image reveal">
+
+                    <!-- ABOUT IMAGE -->
+                    <img src="Ezhins logo.jpg" alt="Ezhins">
+
+                </div>
+
+                <div class="about-text reveal">
+
+                    <span>About Ezhins</span>
+
+                    <h2>
+                        More Than Just Chops.
+                    </h2>
+
+                    <p>
+                        Ezhins brings together food, fashion, beauty,
+                        gifting and decoration under one creative brand.
+                    </p>
+
+                    <p>
+                        Whether you are planning an event, looking for
+                        delicious treats, preparing a special outfit,
+                        getting a henna design or surprising someone
+                        special, Ezhins is ready to create something
+                        memorable for you.
+                    </p>
+
+                    <ul class="about-list">
+                        <li>Quality Products</li>
+                        <li>Creative Designs</li>
+                        <li>Custom Orders</li>
+                        <li>Special Packages</li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         SERVICES
+    ========================== -->
+
+    <section class="section" id="services">
+
+        <div class="container">
+
+            <div class="section-title reveal">
+
+                <span>What We Offer</span>
+
+                <h2>Our Services</h2>
+
+                <p>
+                    Everything you need for food, fashion, beauty
+                    and memorable celebrations.
+                </p>
+
+            </div>
+
+
+            <div class="services-grid">
+
+                <a href="#catering" class="service-card reveal">
+                    <div class="service-icon">🍰</div>
+                    <h3>Catering & Chops</h3>
+                    <p>
+                        Delicious snacks, pastries, cakes and more.
+                    </p>
+                </a>
+
+
+                <a href="#food" class="service-card reveal">
+                    <div class="service-icon">🍚</div>
+                    <h3>Food & Meals</h3>
+                    <p>
+                        Fried rice, spaghetti, couscous and more.
+                    </p>
+                </a>
+
+
+                <a href="#tailoring" class="service-card reveal">
+                    <div class="service-icon">👗</div>
+                    <h3>Tailoring</h3>
+                    <p>
+                        Gowns, bubu, kimono, shirts, skirts and more.
+                    </p>
+                </a>
+
+
+                <a href="#henna" class="service-card reveal">
+                    <div class="service-icon">🌿</div>
+                    <h3>Henna Design</h3>
+                    <p>
+                        Beautiful henna designs for different occasions.
+                    </p>
+                </a>
+
+
+                <a href="#surprise" class="service-card reveal">
+                    <div class="service-icon">🎁</div>
+                    <h3>Surprise & Gifts</h3>
+                    <p>
+                        Bouquets, gift boxes, decorations and surprises.
+                    </p>
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FEATURED MEDIA
+    ========================== -->
+
+    <section class="section featured">
+
+        <div class="container">
+
+            <div class="section-title reveal">
+
+                <span>A Glimpse Of Ezhins</span>
+
+                <h2>Made With Love</h2>
+
+                <p>
+                    Take a look at some of the things we create.
+                </p>
+
+            </div>
+
+
+            <div class="media-grid">
+
+                <div class="media-card reveal">
+
+                    <img src="E foods.jpg" alt="Ezhins Catering">
+
+                    <div class="media-info">
+                        <h3>Delicious Creations</h3>
+                        <p>
+                            Freshly prepared treats for your special moments.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="media-card reveal">
+
+                    <img src="E sew 3.jpg" alt="Ezhins Fashion">
+
+                    <div class="media-info">
+                        <h3>Beautiful Designs</h3>
+                        <p>
+                            Fashion pieces made with care and creativity.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="media-card reveal">
+
+                    <img src="E surprise package.jpg" alt="Ezhins Surprise">
+
+                    <div class="media-info">
+                        <h3>Memorable Surprises</h3>
+                        <p>
+                            Thoughtful gifts and beautiful decorations.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CATERING
+    ========================== -->
+
+    <section class="section category" id="catering">
+
+        <div class="container">
+
+            <div class="category-heading reveal">
+
+                <div>
+                    <span style="color:#a9152b;font-weight:bold;">
+                        CATERING
+                    </span>
+
+                    <h2>Catering & Chops</h2>
+                </div>
+
+                <p>
+                    From small chops to traditional snacks and cakes,
+                    we prepare delicious treats for different occasions.
+                </p>
+
+            </div>
+
+
+            <div class="category-grid">
+
+                <div class="category-item">
+                    <img src="E cake 13.jpg" alt="Samosa">
+                    <h4>Cakes</h4>
+                </div>
+
+                <div class="category-item">
+                    <img src="E cake 9.jpg" alt="Spring Rolls">
+                    <h4>Cakes</h4>
+                </div>
+
+                <div class="category-item">
+                    <img src="E cake 10.jpg" alt="Cakes">
+                    <h4>Cakes</h4>
+                </div>
+
+                <div class="category-item">
+                    <img src="E flier 3.jpg" alt="Meat Pie">
+                    <h4>Meat Pie</h4>
+                </div>
+
+                <div class="category-item">
+                    <img src="E flier.jpg" alt="Puff Puff">
+                    <h4>Puff Puff</h4>
+                </div>
+
+            </div>
+
+
+            <div class="video-grid">
+
+                <div class="video-box">
+                    <video src="ezhins 1.mp4" controls></video>
+                </div>
+
+                 <div class="video-box">
+                    <video src="ezhins 6.mp4" controls></video>
+                </div>
+
+                <div class="video-box">
+                    <video src="ezhin's 10.mp4" controls></video>
+                </div>
+
+            </div> 
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FOOD
+    ========================== -->
+
+    <section class="section category" id="food">
+
+        <div class="container">
+
+            <div class="category-heading reveal">
+
+                <div>
+                    <span style="color:#a9152b;font-weight:bold;">
+                        FOOD
+                    </span>
+
+                    <h2>Food & Meals</h2>
+                </div>
+
+                <p>
+                    Enjoy tasty meals prepared for individuals,
+                    families, events and special occasions.
+                </p>
+
+            </div>
+
+
+            <div class="category-grid">
+
+                <div class="category-item">
+                    <img src="E foods.jpg" alt="Fried Rice">
+                    <h4>Fried Rice</h4>
+                </div>
+
+                 <div class="category-item">
+                    <img src="E foods 12.png" alt="Spaghetti">
+                    <h4>jollof Rice</h4>
+                </div>
+
+                <div class="category-item">
+                    <img src="E foods 11.png" alt="Couscous">
+                    <h4></h4>
+                </div>
+
+                <div class="category-item">
+                    <img src="E food 9.jpg" alt="Food">
+                    <h4>Special Meal</h4>
+                </div>
+
+                <div class="category-item">
+                    <img src="E food's 10.png" alt="Food">
+                    <h4>Custom Order</h4>
+                </div> 
+
+            </div>
+
+
+            <div class="video-grid">
+
+                <div class="video-box">
+                    <video src="ezhins 6.mp4" controls></video>
+                </div>
+
+                <div class="video-box">
+                    <video src="ezhins 1.mp4" controls></video>
+                </div>
+
+                <div class="video-box">
+                    <video src="ezhins 1.mp4" controls></video>
+                </div>
+
+            </div> 
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         TAILORING
+    ========================== -->
+
+    <section class="section category" id="tailoring">
+
+        <div class="container">
+
+            <div class="category-heading reveal">
+
+                <div>
+                    <span style="color:#a9152b;font-weight:bold;">
+                        FASHION
+                    </span>
+
+                    <h2>Tailoring</h2>
+                </div>
+
+                <p>
+                    Beautiful outfits sewn with attention to detail
+                    and made to suit your style.
+                </p>
+
+            </div>
+
+
+            <div class="category-grid">
+
+                <div class="category-item">
+                    <img src="E sew.jpg" alt="Gown">
+                    <h4>Gown</h4>
+                </div>
+
+                <div class="category-item">
+                    <img src="E sew 3.jpg" alt="Bubu">
+                    <!-- <h4>Bubu</h4> -->
+                </div>
+
+                 <div class="category-item">
+                    <img src="E sew.jpg" alt="Shirt and Skirt">
+                     <!-- <h4>Shirt & Skirt</h4>  -->
+                </div> 
+
+                <div class="category-item">
+                    <img src="E sew 2.jpg" alt="Kimono">
+                    <!-- <h4>Kimono</h4> -->
+                </div>
+
+                <div class="category-item">
+                    <img src="E sew 2.jpg" alt="Custom Outfit">
+                    <h4>Custom Outfit</h4>
+                </div> 
+
+            </div>
+
+
+            <div class="video-grid">
+
+                <div class="video-box">
+                    <video src="ezhins 3.mp4" controls></video>
+                </div>
+
+                 <div class="video-box">
+                    <video src="ezhins 3.mp4" controls></video>
+                </div>
+
+                <div class="video-box">
+                    <video src="ezhins 3.mp4" controls></video>
+                </div>
+
+            </div> 
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         HENNA
+    ========================== -->
+
+    <section class="section category" id="henna">
+
+        <div class="container">
+
+            <div class="category-heading reveal">
+
+                <div>
+                    <span style="color:#a9152b;font-weight:bold;">
+                        BEAUTY
+                    </span>
+
+                    <h2>Henna Design</h2>
+                </div>
+
+                <p>
+                    Artistic henna designs for hands, legs, thumbs
+                    and other requested areas.
+                </p>
+
+            </div>
+
+
+            <div class="category-grid">
+
+                <div class="category-item">
+                    <img src="E henna 1.jpg" alt="Henna Hand Design">
+                    <h4>Hand Design</h4>
+                </div>
+
+                <div class="category-item">
+                    <img src="E henna 2.jpg" alt="Henna Leg Design">
+                    <h4>Leg Design</h4>
+                </div>
+
+                <div class="category-item">
+                    <img src="E henna 3.jpg" alt="Henna Thumb Design">
+                    <h4>Thumb Design</h4>
+                </div>
+
+                <div class="category-item">
+                    <img src="E henna 7.jpg" alt="Henna Finger Design">
+                    <h4>Finger Design</h4>
+                </div>
+
+                <div class="category-item">
+                    <img src="E henna 10.jpg" alt="Custom Henna">
+                    <h4>Custom Design</h4>
+                </div>
+
+            </div>
+
+
+            <div class="video-grid">
+
+                <div class="video-box">
+                    <video src="ezhins 5.mp4" controls></video>
+                </div>
+
+                <div class="video-box">
+                    <video src="ezhins 4.mp4" controls></video>
+                </div>
+
+                 <div class="video-box">
+                    <video src="ezhins 5.mp4" controls></video>
+                </div>
+
+            </div>
+
+        </div> 
+
+    </section>
+
+
+    <!-- =========================
+         SURPRISE & GIFTS
+    ========================== -->
+
+    <section class="section category" id="surprise">
+
+        <div class="container">
+
+            <div class="category-heading reveal">
+
+                <div>
+                    <span style="color:#a9152b;font-weight:bold;">
+                        CELEBRATE
+                    </span>
+
+                    <h2>Surprise & Gifts</h2>
+                </div>
+
+                <p>
+                    Make someone's special day unforgettable with
+                    beautiful gifts, bouquets and decorations.
+                </p>
+
+            </div>
+
+
+            <div class="category-grid">
+
+                <div class="category-item">
+                    <img src="e decorations.png" alt="Money Bouquet">
+                    <h4></h4>
+                </div> 
+
+                <div class="category-item">
+                    <img src="E surprise package.jpg" alt="Flower Bouquet">
+                    <h4>Flower Bouquet</h4>
+                </div>
+
+                <!-- <div class="category-item">
+                    <img src="" alt="Gift Box">
+                    <h4>Gift Boxes</h4>
+                </div> -->
+
+                <div class="category-item">
+                    <img src="E cake 6.jpg" alt="Room Decoration">
+                    <!-- <h4>Room Decoration</h4> -->
+                </div>
+
+                <div class="category-item">
+                    <img src="E cake 2.jpg" alt="Surprise Package">
+                    <h4>Surprise Packages</h4>
+                </div>
+
+            </div>
+
+
+            <div class="video-grid">
+
+                <div class="video-box">
+                    <video src="ezhins 2.mp4" controls></video>
+                </div>
+
+                 <div class="video-box">
+                    <video src="ezhin's 8.mp4" controls></video>
+                </div>
+
+                <div class="video-box">
+                    <video src="ezhin's 9.mp4" controls></video>
+                </div>
+
+            </div> 
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         GALLERY
+    ========================== -->
+
+    <section class="section gallery" id="gallery">
+
+        <div class="container">
+
+            <div class="section-title reveal">
+
+                <span>Our Work</span>
+
+                <h2>Gallery</h2>
+
+                <p>
+                    A collection of food, fashion, henna and
+                    beautiful surprises created by Ezhins.
+                </p>
+
+            </div>
+
+
+            <div class="filters">
+
+                <button class="filter-btn active" data-filter="all">
+                    All
+                </button>
+
+                <button class="filter-btn" data-filter="food">
+                    Food
+                </button>
+
+                <button class="filter-btn" data-filter="fashion">
+                    Tailoring
+                </button>
+
+                <button class="filter-btn" data-filter="henna">
+                    Henna
+                </button>
+
+                <button class="filter-btn" data-filter="gifts">
+                    Gifts
+                </button>
+
+            </div>
+
+
+            <div class="gallery-grid">
+
+                <div class="gallery-item" data-category="food">
+                    <img src="E flier 2.jpg" alt="Food Gallery">
+                </div>
+
+                <div class="gallery-item" data-category="food">
+                    <img src="E flier 3.jpg" alt="Chops Gallery">
+                </div>
+
+                <div class="gallery-item" data-category="fashion">
+                    <img src="E sew 3.jpg" alt="Tailoring Gallery">
+                </div>
+
+                <div class="gallery-item" data-category="fashion">
+                    <img src="E sew 2.jpg" alt="Fashion Gallery">
+                </div>
+
+                <div class="gallery-item" data-category="henna">
+                    <img src="E henna 11.jpg" alt="Henna Gallery">
+                </div>
+
+                <div class="gallery-item" data-category="henna">
+                    <img src="E henna 8.jpg" alt="Henna Design">
+                </div>
+
+                <div class="gallery-item" data-category="gifts">
+                    <img src="E surprise package 2.jpg" alt="Gift Gallery">
+                </div>
+
+                <div class="gallery-item" data-category="gifts">
+                    <img src="E surprise package.jpg" alt="Surprise Gallery">
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         ORDER CTA
+    ========================== -->
+
+    <section class="order" id="order">
+
+        <div class="container reveal">
+
+            <h2>Let's Make Your Moment Special.</h2>
+
+            <p>
+                Need catering, an outfit, henna, a gift or a surprise
+                package? Get in touch with Ezhins today.
+            </p>
+
+            <!-- Replace # with actual WhatsApp link -->
+            <a href="#" class="btn">
+                Order / Contact Ezhins
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONTACT
+    ========================== -->
+
+    <section class="section contact" id="contact">
+
+        <div class="container">
+
+            <div class="contact-grid">
+
+                <div class="contact-info reveal">
+
+                    <h2>Let's Talk.</h2>
+
+                    <p>
+                        Have an order or special request?
+                        Reach out and let's discuss what you need.
+                    </p>
+
+
+                    <div class="contact-item">
+
+                        <div class="contact-icon">
+                            📍
+                        </div>
+
+                        <div>
+                            <h4>Location</h4>
+
+                            <p>
+                                Up National Eye Centre,
+                                Mahuta, Kaduna, Nigeria
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="contact-item">
+
+                        <div class="contact-icon">
+                            📞
+                        </div>
+
+                        <div>
+                            <h4>Phone</h4>
+
+                            <p>
+                                07082305872
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="contact-item">
+
+                        <div class="contact-icon">
+                            💬
+                        </div>
+
+                        <div>
+                            <h4>WhatsApp</h4>
+
+                            <p>
+                                Available for orders and enquiries
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="contact-card reveal">
+
+                    <h3>Ready to Order?</h3>
+
+                    <p style="color:#666;margin-bottom:25px;">
+                        Choose how you would like to contact Ezhins.
+                    </p>
+
+                    <!-- Replace # with actual links -->
+
+                    <a href="07082305872">
+                        💬 Order on WhatsApp
+                    </a>
+
+                    <a href="#">
+                        📞 Call Ezhins
+                    </a>
+
+                    <!-- <a href="#" class="social">
+                        📸 Follow on Instagram
+                    </a> -->
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <div class="container">
+
+            <div class="footer-grid">
+
+                <div>
+
+                    <div class="logo">
+                        EZHINS
+                        <small style="color:white;">
+                            CHOPS & MORE
+                        </small>
+                    </div>
+
+                    <p>
+                        Made With Love, Made For Your Moments.
+                        Catering, fashion, beauty, gifts and
+                        beautiful surprises.
+                    </p>
+
+                </div>
+
+
+                <div>
+
+                    <h3>Quick Links</h3>
+
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+
+                </div>
+
+
+                <div>
+
+                    <h3>Services</h3>
+
+                    <ul class="footer-links">
+                        <li>Catering & Chops</li>
+                        <li>Food & Meals</li>
+                        <li>Tailoring</li>
+                        <li>Henna Design</li>
+                        <li>Surprise & Gifts</li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+
+            <div class="copyright">
+
+                © <span id="year"></span> Ezhins. All Rights Reserved.
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script>
+
+        /* =========================
+           MOBILE MENU
+        ========================== */
+
+        const menuBtn = document.getElementById("menuBtn");
+        const navLinks = document.getElementById("navLinks");
+
+        menuBtn.addEventListener("click", function () {
+
+            navLinks.classList.toggle("show");
+
+        });
+
+
+        /* Close mobile menu after clicking */
+
+        document.querySelectorAll(".nav-links a").forEach(function(link) {
+
+            link.addEventListener("click", function() {
+
+                navLinks.classList.remove("show");
+
+            });
+
+        });
+
+
+        /* =========================
+           GALLERY FILTER
+        ========================== */
+
+        const filterButtons =
+            document.querySelectorAll(".filter-btn");
+
+        const galleryItems =
+            document.querySelectorAll(".gallery-item");
+
+
+        filterButtons.forEach(function(button) {
+
+            button.addEventListener("click", function() {
+
+                /* Remove active class */
+
+                filterButtons.forEach(function(btn) {
+
+                    btn.classList.remove("active");
+
+                });
+
+
+                /* Add active class */
+
+                this.classList.add("active");
+
+
+                const filter =
+                    this.getAttribute("data-filter");
+
+
+                galleryItems.forEach(function(item) {
+
+                    const category =
+                        item.getAttribute("data-category");
+
+
+                    if (filter === "all" || category === filter) {
+
+                        item.classList.remove("hide");
+
+                    } else {
+
+                        item.classList.add("hide");
+
+                    }
+
+                });
+
+            });
+
+        });
+
+
+        /* =========================
+           SCROLL REVEAL
+        ========================== */
+
+        const revealElements =
+            document.querySelectorAll(".reveal");
+
+
+        const observer = new IntersectionObserver(
+
+            function(entries) {
+
+                entries.forEach(function(entry) {
+
+                    if (entry.isIntersecting) {
+
+                        entry.target.classList.add("show");
+
+                    }
+
+                });
+
+            },
+
+            {
+                threshold: 0.12
+            }
+
+        );
+
+
+        revealElements.forEach(function(element) {
+
+            observer.observe(element);
+
+        });
+
+
+        /* =========================
+           CURRENT YEAR
+        ========================== */
+
+        document.getElementById("year").textContent =
+            new Date().getFullYear();
+
+    </script>
+
+</body>
+</html>
